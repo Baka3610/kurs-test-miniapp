@@ -357,7 +357,8 @@ export default function App() {
 
   const goBackToBot = () => {
     const tg = window.Telegram?.WebApp;
-    if (tg) {
+
+    if (tg && typeof tg.close === 'function') {
       tg.close();
     }
   };
