@@ -359,8 +359,6 @@ export default function App() {
     const tg = window.Telegram?.WebApp;
     if (tg) {
       tg.close();
-    } else {
-      restart();
     }
   };
 
@@ -399,11 +397,6 @@ export default function App() {
               Вернуться в бота
             </button>
 
-            {!isTelegram && (
-              <button onClick={restart} style={styles.secondaryButton}>
-                Пройти тест заново
-              </button>
-            )}
           </div>
         </div>
       </div>
